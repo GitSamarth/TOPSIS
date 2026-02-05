@@ -67,7 +67,7 @@ def index():
         # -------- SEND EMAIL --------
         msg = EmailMessage()
         msg["Subject"] = "TOPSIS Result"
-        msg["From"] = "samarthmahajan77@gmail.com"
+        msg["From"] = "your_email@gmail.com"
         msg["To"] = email
         msg.set_content("Please find attached TOPSIS result.")
 
@@ -80,7 +80,7 @@ def index():
             )
 
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-            server.login("samarthmahajan77@gmail.com", "ktmupfyeqkzxprdq")
+            server.login("your_email@gmail.com", "APP_PASSWORD")
             server.send_message(msg)
 
         return "Result sent to your email!"
@@ -89,3 +89,8 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
+
